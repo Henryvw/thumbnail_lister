@@ -1,0 +1,16 @@
+%h1 Register at Thumbnail Lister
+
+= form_with(model: User.new) do |form|
+  - if @user.errors.any?
+    %h4 Your thumb aint right: Registration is invalid
+    %h5 When more features are defined, I would write specific validation errors that would appear here
+
+  = form.text_field :email
+
+  = form.label :password
+  = form.password_field :password
+
+  = form.label :password_confirmation
+  = form.password_field :password_confirmation
+
+  = form.submit('Register')

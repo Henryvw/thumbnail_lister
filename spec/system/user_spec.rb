@@ -7,9 +7,8 @@ RSpec.describe 'Users', type: :system do
     fill_in 'user_email', with: 'thumb_lover123@gmail.com'
     fill_in 'user_password', with: '1234fingers'
     fill_in 'user_password_confirmation', with: '1234fingers'
-    click_button 'Regiser'
-    expect(page).to have_content 'Welcome to Thumbnail Lister!'
-    expect(page).to have_http_status(:success)
+    click_button 'Register'
+    expect(page).to have_content 'Congrats on your new Thumbnail Listener account.'
   end
 
   it 'can log in with its account infos' do
