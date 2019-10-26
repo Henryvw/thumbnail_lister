@@ -1,5 +1,5 @@
 {
-  "name": "devolute_react_rails",
+  "name": "thumbnail_lister",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.6.3",
