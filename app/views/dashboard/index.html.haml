@@ -1,8 +1,10 @@
 %h1 Welcome to Thumbnail Lister: The Paradise for Collectors of Thumbnail Images
 
+%p=flash[:success] unless flash[:success].blank?
+
 - unless current_user
   %a{href: new_user_path} Register Here
   %a{href: new_session_path} Sign In
-
-%p=flash[:success] unless flash[:success].blank?
+- else
+  %a{href: new_thumbnail_path} Add a Thumbnail here
 
