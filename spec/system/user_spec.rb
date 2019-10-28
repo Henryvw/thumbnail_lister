@@ -21,4 +21,15 @@ RSpec.describe 'Users', type: :system do
 
     expect(page).to have_content 'Welcome to Thumbnail Lister, Buddy!'
   end
+
+  it 'when logged in, it removes Sign In Button and displays your email' do
+    existing_user = FactoryBot.create(:user)
+    visit root_path
+    click_link 'Sign In'
+    fill_in 'session_email', with: existing_user.email
+    fill_in 'session_password', with: existing_user.password
+    click_button 'Log In'
+    expect(page).to_not have_content('Sign In')
+    expect(page).to have_content(existing_user.email)
+  end
 end
