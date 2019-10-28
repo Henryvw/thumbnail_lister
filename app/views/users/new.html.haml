@@ -1,10 +1,9 @@
 %h1 Register at Thumbnail Lister
+- if flash[:alert]
+  %p="#{flash[:alert]}"
 
 = form_with(model: User.new) do |form|
-  - if @user.errors.any?
-    %h4 Your thumb aint right: Registration is invalid
-    %h5 When more features are defined, I would write specific validation errors that would appear here
-
+  = form.label :email
   = form.text_field :email
 
   = form.label :password
