@@ -1,0 +1,9 @@
+%h1 Log into your amazing account
+- if flash[:alert]
+  %p="#{flash[:alert]}"
+= form_with(scope: :session, url: sessions_path) do |form|
+  = form.label :email
+  = form.text_field :email
+  = form.label :password
+  = form.password_field :password
+  = form.submit('Log In')

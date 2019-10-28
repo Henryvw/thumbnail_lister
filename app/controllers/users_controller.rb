@@ -10,7 +10,8 @@ class UsersController < ApplicationController
       flash[:success] = 'Congrats on your new Thumbnail Listener account. You aint gonna regret registering at Thumbnail Listener.' 
       redirect_to root_url
     else
-      render 'new', notice: 'There was a problem with your registration.'
+      flash[:alert] = 'There was a problem with your registration.'
+      redirect_to new_user_path
     end
 
   end
