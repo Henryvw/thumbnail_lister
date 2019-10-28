@@ -1,0 +1,4 @@
+%h1 My List of Thumbnails
+- @thumbnails.each do |thumb|
+  = image_tag(thumb.picture, style: "width: 20%; height: 20vh; object-fit: cover") if thumb.picture.attached?
+

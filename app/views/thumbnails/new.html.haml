@@ -1,5 +1,5 @@
 %h1 Add a Thumbnail 
 
 = form_with(model: Thumbnail.new) do |form|
-  = form.file_field :thumbnail, label: 'Add a Thumbnail here', class: 'form-control'
-
+  = form.file_field :picture, label: 'Add a Thumbnail here'
+  = form.submit('Upload It')
